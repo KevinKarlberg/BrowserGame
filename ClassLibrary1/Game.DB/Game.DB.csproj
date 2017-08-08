@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{697A0606-B7A6-44F1-954E-ED8E002132EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game.DB</RootNamespace>
+    <AssemblyName>Game.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameDBContext.cs" />
+    <Compile Include="Models\Army\Ship.cs" />
+    <Compile Include="Models\Army\ShipAvailabilityLevel.cs" />
+    <Compile Include="Models\Army\ShipType.cs" />
+    <Compile Include="Models\Army\StaticDefence.cs" />
+    <Compile Include="Models\Army\Troop.cs" />
+    <Compile Include="Models\Army\TroopAvailabilityLevel.cs" />
+    <Compile Include="Models\Army\TroopType.cs" />
+    <Compile Include="Models\Buildings\Building.cs" />
+    <Compile Include="Models\Buildings\BuildingEffect.cs" />
+    <Compile Include="Models\Chat\Chat.cs" />
+    <Compile Include="Models\Chat\ChatMessages.cs" />
+    <Compile Include="Models\Location\Cluster.cs" />
+    <Compile Include="Models\Location\Galaxy.cs" />
+    <Compile Include="Models\Location\Location.cs" />
+    <Compile Include="Models\Location\Planet.cs" />
+    <Compile Include="Models\Location\System.cs" />
+    <Compile Include="Models\Location\Terrain.cs" />
+    <Compile Include="Models\Market\Buying.cs" />
+    <Compile Include="Models\Market\Selling.cs" />
+    <Compile Include="Models\Missions\DailyMission.cs" />
+    <Compile Include="Models\Missions\Mission.cs" />
+    <Compile Include="Models\Missions\MissionRequirement.cs" />
+    <Compile Include="Models\Missions\MissionType.cs" />
+    <Compile Include="Models\Player\Player.cs" />
+    <Compile Include="Models\Protection\ProtectionLevel.cs" />
+    <Compile Include="Models\Races\Race.cs" />
+    <Compile Include="Models\Races\RacialTrait.cs" />
+    <Compile Include="Models\Research\Research.cs" />
+    <Compile Include="Models\Resources\Gas.cs" />
+    <Compile Include="Models\Resources\Mineral.cs" />
+    <Compile Include="Models\Resources\MiniaturizedStar.cs" />
+    <Compile Include="Models\Resources\Oil.cs" />
+    <Compile Include="Models\Resources\SpecialResource.cs" />
+    <Compile Include="Models\Stats\ResearchMultipliers\ResearchCostMultiplier.cs" />
+    <Compile Include="Models\Stats\ResearchMultipliers\ResearchEffectMultiplier.cs" />
+    <Compile Include="Models\Stats\ResearchMultipliers\ResearchSpeedMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\FlightSpeedMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\ShipAttackStrengthMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\ShipCarryingCapacityMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\ShipConstructionSpeedMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\ShipCostMultiplier.cs" />
+    <Compile Include="Models\Stats\ShipMultipliers\ShipDefenseStrengthMultiplier.cs" />
+    <Compile Include="Models\Stats\TroopMultiplier\TroopAttackStrengthMultiplier.cs" />
+    <Compile Include="Models\Stats\TroopMultiplier\TroopCostMultiplier.cs" />
+    <Compile Include="Models\Stats\TroopMultiplier\TroopDefenseStengthMultiplier.cs" />
+    <Compile Include="Models\Stats\TroopMultiplier\TroopTrainingTimeMultiplier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositiories\Interfaces\IRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Events\" />
+    <Folder Include="Models\Stats\ClusterMultipliers\" />
+    <Folder Include="Models\Stats\GalaxyMultipliers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
