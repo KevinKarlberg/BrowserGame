@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.DB.Models.Player
+namespace Game.DB.Models.Resources
 {
-    class Player
+    class Resource
     {
     }
 }

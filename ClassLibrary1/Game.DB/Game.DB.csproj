@@ -71,7 +71,7 @@
     <Compile Include="Models\Missions\Mission.cs" />
     <Compile Include="Models\Missions\MissionRequirement.cs" />
     <Compile Include="Models\Missions\MissionType.cs" />
-    <Compile Include="Models\Player\Player.cs" />
+    <Compile Include="Models\Players\Player.cs" />
     <Compile Include="Models\Protection\ProtectionLevel.cs" />
     <Compile Include="Models\Races\Race.cs" />
     <Compile Include="Models\Races\RacialTrait.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="Models\Resources\Mineral.cs" />
     <Compile Include="Models\Resources\MiniaturizedStar.cs" />
     <Compile Include="Models\Resources\Oil.cs" />
+    <Compile Include="Models\Resources\Resource.cs" />
     <Compile Include="Models\Resources\SpecialResource.cs" />
     <Compile Include="Models\Stats\ResearchMultipliers\ResearchCostMultiplier.cs" />
     <Compile Include="Models\Stats\ResearchMultipliers\ResearchEffectMultiplier.cs" />
